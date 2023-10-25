@@ -1,0 +1,27 @@
+# Quicker navigation
+alias ..="cd .."
+alias ...="cd ../.."
+alias ....="cd ../../.."
+alias .....="cd ../../../.."
+
+# Enable aliases to be sudo’ed
+alias sudo='sudo '
+
+# Git
+# You must install Git first - ""
+alias gs='git status'
+alias ga='git add'
+alias gc='git commit -m' # requires you to type a commit message
+alias gb='git branch -a'
+alias gl='git log --pretty=oneline --abbrev-commit --graph --decorate'
+alias gd='git diff --patience'
+alias gds='git diff --patience --staged'
+
+### Misc
+
+# Only show the current directory's name in the tab
+export PROMPT_COMMAND='echo -ne "\033]0;${PWD##*/}\007"'
+
+eval "$(/opt/homebrew/bin/brew shellenv)"
+
+export PATH="$PATH:/Users/brilee/.local/bin"
